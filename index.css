@@ -1,0 +1,38 @@
+*{
+    background-color: rgb(255, 255, 255);
+}
+
+.estudios {
+    font-size: 3pc;
+    font-style: italic;
+}
+
+.centrado{
+    text-align: center;
+}
+.informacion{
+    display: flex;
+    justify-content: center;
+}
+
+.informacion>div {
+    border-color: red;
+    flex-grow: 1;
+}
+
+div{
+    border: 3px solid green;
+    margin: 5px;
+}
+.fotoperfil{
+    width: 200px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+body{
+    max-width: 800px;
+     margin-left: auto;
+    margin-right: auto;
+    font-family: sans-serif
+}
