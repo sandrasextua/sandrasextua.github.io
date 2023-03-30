@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+          integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous"
+          referrerpolicy="no-referrer"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>CURRICULUM VITAE</title>
+</head>
+<body>
+<!-- SECCION INICIO -->
+<div class="inicio">
+    <section id="inicio">
+        <div class="contenido-seccion">
+            <header>
+                <div class="logo">
+                    S <span class="color">S</span>
+                </div>
+                <div class="foto">
+                    <img src="fotoperfil1.jpeg" alt="">
+                </div>
+            </header>
+            <div class="info">
+                <h1>SANDRA SEXTUA</h1>
+                <h2>COLEGIO DE ESCRIBANOS</h2>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="navegacion">
+            <a href="index.html">INICIO</a>
+            <a href="formacion.html">FORMACIÓN</a>
+            <a href="experiencia.html">EXPERIENCIA LABORAL</a>
+            <a href="contacto.html">CONTACTO</a>
+        </div>
+    </section>
+    <section class="informacion">
+        <div>
+            <h2>Enviame un mensaje</h2>
+            <form onsubmit="return validar(event);" action="#" class="formulario-contacto">
+                <br>
+                <label for="nombre">Nombre</label><br>
+                <input required type="text" id="nombre" name="nombre" placeholder="Juan Perez"><br>
+                <label for="email">Email</label><br>
+                <input required type="email" id="email" name="nombre" placeholder="juanperez@tuemail.com"><br>
+                <label for="telefono">Telefono</label><br>
+                <input type="tel" id="telefono" name="nombre" placeholder="01112345678 - Solo números" max="11"><br>
+                <label for="mensaje">Mensaje:</label><br>
+                <textarea required id="mensaje" name="nombre" placeholder="Tu Mensaje"></textarea><br>
+                <br>
+                <button type="submit">Enviar</button>
+                <button type="button">Limpiar campos</button>
+            </form>
+        </div>
+    </section>
+</div>
+<script type="text/javascript">
+	function validar(event) {
+		let valid = true;
+		if (event.target.querySelector('#nombre').value.toString().trim() === '') {
+			alert('Debes completar el nombre');
+			valid = false;
+		}
+		if (event.target.querySelector('#email').value.toString().trim() === '') {
+			alert('Debes completar el email');
+			valid = false;
+		}
+		if (event.target.querySelector('#email').value.toString().indexOf('@') === -1) {
+			alert('El email debe contener @');
+			valid = false;
+		}
+		if (event.target.querySelector('#email').value.toString().indexOf('.') === -1) {
+			alert('El email debe contener punto');
+			valid = false;
+		}
+		if (event.target.querySelector('#telefono').value.toString().trim() === '') {
+			alert('Debes completar el telefono');
+			valid = false;
+		}
+		if (isNaN(event.target.querySelector('#telefono').value.toString())) {
+			alert('El teléfono solo debe contener números');
+			valid = false;
+		}
+		if (event.target.querySelector('#mensaje').value.toString().trim() === '') {
+			alert('Debes completar el nombre');
+			valid = false;
+		}
+
+		if (valid) {
+			alert('Tu mensaje será enviado. GRACIAS!')
+		}
+		return false;
+	}
+</script>
+</body>
+</html>
