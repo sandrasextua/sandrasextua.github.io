@@ -12,7 +12,7 @@ body{
     color: #fff;
     background: linear-gradient(#940253, rgba(0, 0, 0, .3)) round;
     padding-bottom: 50px;
-    min-width: 520px;
+    min-width: 500px;
 }
 
 .inicio .contenido-seccion{
@@ -124,6 +124,7 @@ body{
 
 .navegacion {
     text-align: center;
+    line-height: 60px;
 }
 
 .navegacion a{
